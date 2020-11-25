@@ -6,13 +6,14 @@ class Customer():
         self.drunkenness = 0
 
 
-    def buy_drink(self, drink, pub):
+    def buy_drink_and_increase_drunkenness(self, drink, pub):
 
         if self.wallet >= drink.price:
             self.wallet -= drink.price
-            pub.till += drink.price
-            return self.wallet
+            self.drunkenness += drink.alcohol_level
+            return self.wallet, self.drunkenness
 
         else:
             return "Customer has not enough money"
+
 
