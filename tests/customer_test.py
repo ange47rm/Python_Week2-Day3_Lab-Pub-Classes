@@ -18,11 +18,11 @@ class TestCustomer(unittest.TestCase):
         self.assertEqual (30.00, self.customer_1.wallet)
 
     def test_customer_can_buy_drink(self):
-        drink_1 = Drink("Coke", 3)
+        drink_1 = Drink("Coke", 3, 0)
         pub = Pub("The Prancing Pony", 100.00)
         self.assertEqual (1.00, self.customer_2.buy_drink(drink_1, pub))
         
     def test_customer_cannot_buy_drink(self):
-        drink_2 = Drink("Beer", 5)
+        drink_2 = Drink("Beer", 5, 4)
         pub = Pub("The Prancing Pony", 100.00)
         self.assertEqual("Customer has not enough money", self.customer_2.buy_drink(drink_2, pub))
