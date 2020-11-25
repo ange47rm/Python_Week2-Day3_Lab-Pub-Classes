@@ -7,8 +7,8 @@ from src.pub import Pub
 class TestCustomer(unittest.TestCase):
 
     def setUp(self):
-        self.customer_1 = Customer("Tim", 30.00)
-        self.customer_2 = Customer("Jane", 4.00)
+        self.customer_1 = Customer("Tim", 30.00, 20)
+        self.customer_2 = Customer("Jane", 4.00, 16)
 
     def test_customer_has_name(self):
         self.assertEqual ('Tim', self.customer_1.name)
