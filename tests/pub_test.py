@@ -33,8 +33,6 @@ class TestPub(unittest.TestCase):
         customer_5 = Customer("Dave", 200, 56, 15)
         self.assertEqual ("Customer cannot buy drink", self.pub.sell_drink(drink_2, customer_5))
 
-# Test if drunk customer can buy beer
-
 
 
 
