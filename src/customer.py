@@ -4,10 +4,11 @@ class Customer():
         self.wallet = wallet
 
 
-    def buy_drink(self, drink):
+    def buy_drink(self, drink, pub):
 
         if self.wallet >= drink.price:
             self.wallet -= drink.price
+            pub.till += drink.price
             return self.wallet
 
         else:

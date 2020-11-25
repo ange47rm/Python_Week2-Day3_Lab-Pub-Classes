@@ -4,3 +4,6 @@ class Pub():
         self.till = till
         self.drinks = []
         
+    def sell_drink(self, drink):
+        self.till += drink.price    
+        return self.till 
