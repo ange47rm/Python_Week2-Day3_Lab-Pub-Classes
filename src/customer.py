@@ -1,9 +1,9 @@
 class Customer():
-    def __init__(self, name, wallet, age):
+    def __init__(self, name, wallet, age, drunkenness):
         self.name = name
         self.wallet = wallet
         self.age = age
-        self.drunkenness = 0
+        self.drunkenness = drunkenness
 
 
     def buy_drink_and_increase_drunkenness(self, drink, pub):
@@ -14,6 +14,6 @@ class Customer():
             return self.wallet, self.drunkenness
 
         else:
-            return "Customer has not enough money"
+            return "Customer cannot buy drink"
 
 
